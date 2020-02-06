@@ -11,7 +11,7 @@ const prompt = require('prompt-sync')({sigint: true}); //signit: true allows use
 
 // function to ask user for choice & validate
 function getUserInput(){
-
+    
     // keep looping if no answer is provided or validation returns false
     const run = false;
     while (!run){
@@ -50,7 +50,7 @@ function getComputerChoice(){
     
     return randomChoice;
     
-}
+};
 
 
 // determine which weapon choice wins and compare against user & comp choice to find a winner or a draw
@@ -103,7 +103,7 @@ console.log('Welcome To Rock Paper Scissors. \nBest of three rounds! \n');
 const name = prompt("What's your name? ");
 
 
-// game details
+// initalise game statistics
 let gamesPlayed = 0;
 let userScore = 0;
 let compScore = 0;
@@ -118,8 +118,9 @@ while (gamesPlayed <3){
     // pass choices into function to find a winner
     findAWinner(userChoice, compChoice);
 
-    
-}
+};
+
+
 
 // find the winner over three games
 if (userScore > compScore){
