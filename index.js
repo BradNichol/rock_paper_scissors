@@ -15,6 +15,8 @@ function getUserInput(){
     // keep looping if no answer is provided or validation returns false
     const run = false;
     while (!run){
+
+        console.log(`Round ${gamesPlayed}! FIGHT!`)
         // convert choice to lowercase for easier validation
         const choice = prompt(`Pick your weapon ${name}! Rock, Paper or Scissors? `).toLowerCase();
         if (choice){
@@ -104,13 +106,13 @@ const name = prompt("What's your name? ");
 
 
 // initalise game statistics
-let gamesPlayed = 0;
+let gamesPlayed = 1;
 let userScore = 0;
 let compScore = 0;
 
 
 // loop for 'best of three' games
-while (gamesPlayed <3){
+while (gamesPlayed <= 3){
     // get choices from user and computer
     const userChoice = getUserInput();
     const compChoice = getComputerChoice();
