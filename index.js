@@ -74,13 +74,16 @@ function findAWinner (userChoice, compChoice){
 
     // determine the winner
     if (userChoice == win){
-        console.log(`############### \n Congratulations ${name}, you won! \n###############`);
+        console.log(`############### \n You won this round! \n###############`)
+        userScore++;
     } else if (compChoice == win){
-        console.log(`############### \n Unfortunately, the computer won. Boooo \n###############`);
+        console.log(`############### \n Unfortunately, the computer won this round. Boooo \n###############`)
+        compScore++;
     } else {
-        console.log(`############### \n It's a draw. \n###############`);
+        console.log(`############### \n This round is a draw. \n###############`);
     };
     
+    gamesPlayed++;
     
 };
 
@@ -100,13 +103,40 @@ console.log('Welcome To Rock Paper Scissors');
 const name = prompt("What's your name?");
 
 
-// get choices from user and computer
-const userChoice = getUserInput();
-const compChoice = getComputerChoice();
+// game details
+let gamesPlayed = 0;
+let userScore = 0;
+let compScore = 0;
 
 
-// pass choices into function to find a winner
-findAWinner(userChoice, compChoice);
+// loop for 'best of three' games
+while (gamesPlayed <3){
+    // get choices from user and computer
+    const userChoice = getUserInput();
+    const compChoice = getComputerChoice();
+
+    // pass choices into function to find a winner
+    findAWinner(userChoice, compChoice);
+
+    
+}
+
+// find the winner over three games
+if (userScore > compScore){
+    console.log(`Congratulations ${name}, you won best of three rounds of Rock, Paper Scissors`)
+} else if (compScore > userScore){
+    console.log('Unfortunately, the computer beat you. Better luck next time.')
+} else {
+    console.log(`Looks like it's a draw.`)
+}
+
+// final scores
+console.log('************ Final Scores ************ ')
+console.log(`user score is: ${userScore}.`)
+console.log(`comp score is: ${compScore}.`)
+
 
 /* --------------------------------- */
 
+
+    
