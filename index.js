@@ -122,6 +122,10 @@ while (gamesPlayed <= 3){
 
 };
 
+// final scores
+console.log('************ Final Scores ************ ')
+console.log(`user score is: ${userScore}.`)
+console.log(`comp score is: ${compScore}.`)
 
 
 // find the winner over three games
@@ -133,10 +137,7 @@ if (userScore > compScore){
     console.log(`Looks like it's a draw.`)
 }
 
-// final scores
-console.log('************ Final Scores ************ ')
-console.log(`user score is: ${userScore}.`)
-console.log(`comp score is: ${compScore}.`)
+
 
 
 /* --------------------------------- */
