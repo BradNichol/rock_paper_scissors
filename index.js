@@ -16,7 +16,7 @@ function getUserInput(){
     const run = false;
     while (!run){
         // convert choice to lowercase for easier validation
-        const choice = prompt(`Pick your weapon ${name}! Rock, Paper or Scissors?`).toLowerCase();
+        const choice = prompt(`Pick your weapon ${name}! Rock, Paper or Scissors? `).toLowerCase();
         if (choice){
             if (validateEntry(choice)){
                 return choice;
@@ -97,10 +97,10 @@ function findAWinner (userChoice, compChoice){
 /* ---- Run program ---- */
 
 // welcome message
-console.log('Welcome To Rock Paper Scissors');
+console.log('Welcome To Rock Paper Scissors. \nBest of three rounds! \n');
 
 // prompt for users name
-const name = prompt("What's your name?");
+const name = prompt("What's your name? ");
 
 
 // game details
